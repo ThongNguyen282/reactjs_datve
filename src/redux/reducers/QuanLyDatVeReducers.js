@@ -17,7 +17,7 @@ export const QuanLyDatVeReducers = (state = stateDefault, action) => {
             // console.log("test", action)
             //cập nhật danh sách ghế đang đặt
 
-            let danhSachCapNhat = { ...state.danhSachGheDangDat };
+            let danhSachCapNhat = [...state.danhSachGheDangDat];
 
             let index = danhSachCapNhat.findIndex(gheDD => gheDD.soGhe === action.gheDuocChon.soGhe);
             if (index != -1) {

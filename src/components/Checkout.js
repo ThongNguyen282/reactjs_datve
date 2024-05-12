@@ -82,7 +82,10 @@ const Checkout = (props) => {
                     })}
                     <tr>
                         <td>Tổng tiền</td>
-                        <td colSpan={2}>0</td>
+                        <td colSpan={2}>{danhSachGheDangDat.reduce((tongTien, ghe, index) => {
+                            return tongTien += ghe.gia;
+
+                        }, 0).toLocaleString()}</td>
                     </tr>
                 </table>
 
