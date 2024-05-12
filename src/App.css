@@ -1,38 +1,82 @@
-.App {
-  text-align: center;
+.trapezoid {
+    border-bottom: 50px solid gray;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    height: 0;
+    width: 80%;
+    opacity: 0.3;
+    filter: drop-shadow(0px 128px 63px rgba(8, 8, 8, 0.38));
+    -webkit-filter: drop-shadow(0px 128px 63px rgba(8, 8, 8, 0.38));
+    -moz-filter: drop-shadow(0px 128px 63px rgba(8, 8, 8, 0.38));
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.hang {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.ghe {
+    width: calc(100% / 12);
+    border: 3px solid orange;
+    cursor: pointer;
+    width: 45px;
+    height: 35px;
+    font-size: 12px;
+    margin-left: 2%;
+    margin-bottom: 1%;
+    border-radius: 5px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.ghe:not(.da-dat) {
+    background-color: red;
+    cursor: default;
+    /* Thêm các thuộc tính CSS khác tùy ý */
 }
 
-.App-link {
-  color: #61dafb;
+.gheDangDat {
+    background-color: rgb(18, 176, 18) !important;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* .gheDuocChon {
+    border: 3px solid orange;
+
+    background: orange;
+    color: #000;
+
+    cursor: no-drop !important;
+    border-radius: 5px;
+    width: 45px;
+    height: 35px;
+}
+
+
+.gheDangChon {
+    background: rgb(109, 238, 109);
+    border: 3px solid rgb(109, 238, 109);
+    color: #000;
+
+    cursor: pointer;
+    border-radius: 5px;
+    width: 45px;
+    height: 35px;
+} */
+
+/* right */
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td,
+th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
 }
