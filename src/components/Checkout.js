@@ -26,7 +26,7 @@ const Checkout = (props) => {
                         //kiểm tra từng ghế render
                         let classGheDangDat = '';
                         let indexGheDD = danhSachGheDangDat.findIndex(gheDD => gheDD.soGhe === ghe.soGhe);
-                        if (indexGheDD != -1) {
+                        if (indexGheDD !== -1) {
                             classGheDangDat = 'gheDangDat'
                         }
                         return (
@@ -61,28 +61,27 @@ const Checkout = (props) => {
             <div className='col-4'>
                 <h2>DANH SÁCH GHẾ CỦA BẠN </h2>
                 <div>
-                    <div>Ghế đã đặt</div>
-                    <div>Ghế đang chọn</div>
-                    <div>Ghế chưa đặt</div>
+                    <div><div className='ghe'></div>Ghế đã đặt</div>
+                    <div><div className='ghe gheDangDat'></div>Ghế đang chọn</div>
+                    <div><div className='ghe da-dat' style={{ cursor: "default" }}></div>Ghế chưa đặt</div>
                 </div>
                 <table>
                     <tr>
                         <th>Số ghế </th>
                         <th>Giá </th>
-                        <th>Hủy</th>
+
                     </tr>
                     {danhSachGheDangDat.map((gheDD, index) => {
                         return (
                             <tr key={index}>
                                 <td>{gheDD.soGhe}</td>
                                 <td>{gheDD.gia}</td>
-                                <td>X</td>
                             </tr>
                         )
                     })}
                     <tr>
-                        <td>Tổng tiền</td>
-                        <td colSpan={2}>{danhSachGheDangDat.reduce((tongTien, ghe, index) => {
+
+                        <td colSpan={2}>Tổng tiền : {danhSachGheDangDat.reduce((tongTien, ghe, index) => {
                             return tongTien += ghe.gia;
 
                         }, 0).toLocaleString()}</td>

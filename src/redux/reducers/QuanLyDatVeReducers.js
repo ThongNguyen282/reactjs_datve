@@ -20,7 +20,7 @@ export const QuanLyDatVeReducers = (state = stateDefault, action) => {
             let danhSachCapNhat = [...state.danhSachGheDangDat];
 
             let index = danhSachCapNhat.findIndex(gheDD => gheDD.soGhe === action.gheDuocChon.soGhe);
-            if (index != -1) {
+            if (index !== -1) {
                 //nếu tìm thấy ghế được chọn trong mảng có nghia là truocs đó đá có click vào => xóa đi
                 danhSachCapNhat.splice(index, 1);
             } else {
